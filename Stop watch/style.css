@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #1b4332; 
+    color: #d8f3dc; 
+  }
+
+  .stopwatch-container {
+    margin-top: 10%;
+    padding: 30px;
+    background: linear-gradient(135deg, #2d6a4f, #1b4332); /* Gradient green background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  #display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+.buttons button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #52b788, #2d6a4f); /* Dual-tone green button */
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  
+  .buttons button:hover {
+    background: #40916c; /* Brighter green on hover */
+    transform: scale(1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }  
+  
+  #laps {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #laps li {
+    background: #081c15; /* Very dark green for contrast */
+    color: #d8f3dc; /* Mint green text */
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #52b788; /* Accent green border */
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .stopwatch-container {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    #display {
+      font-size: 2.5rem;
+    }
+  
+    .buttons button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
