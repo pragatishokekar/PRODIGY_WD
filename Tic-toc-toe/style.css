@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #318338; /* Body background color */
+    margin: 0;
+    transition: background-color 0.5s ease;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #38853a; /* Container background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    animation: fadeIn 1s ease-out;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white; /* Text color for contrast */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #4caf50; /* Hover effect with green */
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cell:active {
+    background-color: #388e3c; /* Darker green when clicked */
+}
+
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 1s infinite;
+}
+
+.reset-btn:hover {
+    background-color: #388e3c; /* Dark green hover effect */
+    transform: scale(1.1);
+}
+
+.reset-btn:active {
+    background-color: #2e7d32; /* Even darker green for active state */
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Status text color */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
