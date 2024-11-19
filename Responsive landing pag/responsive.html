@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <h2>LOGO</h2>
+            <div class="nav-2">
+                <h4>Home</h4>
+                <h4>Course</h4>
+                <h4>About-us</h4>
+                <h4>Service</h4>
+                <h4>Help</h4>
+                <button>Sign In</button>
+                <i class="ri-menu-3-line open-btn" onclick="toggleSidebar()"></i>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <h1>
+                    Lorem ipsum dolor sit <span>coolest</span> consectetur adipisicing elit.
+                </h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo debitis veritatis, tempore molestias exercitationem quisquam nostrum id quam pariatur animi!</p>
+                <button>Explore Now</button>
+            </div>
+            <div class="right">
+                <img src="../image/coder.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">✖</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="responsive.js"></script>
+</body>
+</html>
